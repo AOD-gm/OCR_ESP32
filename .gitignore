@@ -1,0 +1,10 @@
+build/
+
+sdkconfig.old
+sdkconfig.defaults
+
+*.bak
+*~
+.DS_Store
+
+
