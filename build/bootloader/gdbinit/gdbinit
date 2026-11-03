@@ -1,0 +1,2 @@
+source /home/datlvt/Documents/HK5/AI_TrenHeThongNhung/DoAn/emnist_esp32s3/build/bootloader/gdbinit/symbols
+source /home/datlvt/Documents/HK5/AI_TrenHeThongNhung/DoAn/emnist_esp32s3/build/bootloader/gdbinit/connect

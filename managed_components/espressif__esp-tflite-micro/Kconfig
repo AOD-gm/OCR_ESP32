@@ -1,0 +1,18 @@
+menu "ESP TFLite-Micro"
+
+    config ESP_TFLITE_MICRO_USE_ESP_NN
+        bool "Use ESP-NN optimized kernels"
+        default y
+        help
+            When enabled (default), -DESP_NN is defined and the conv2d,
+            depthwise-conv, fully-connected, mul, add, pooling and softmax kernels
+            use the esp-nn component (SIMD/vector-optimized per target).
+
+            When disabled, -DESP_NN is not defined. The esp_nn/ kernel wrappers are
+            still compiled, but their optimized paths compile out and they fall back
+            to TFLite Micro's own portable reference implementations. No application
+            or example code needs to change (the per-kernel profiling symbols still
+            exist). Useful for portability checks, debugging, and A/B benchmarking
+            of esp-nn against the reference kernels.
+
+endmenu
